@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Floating Widget Demo</title>
+	<link rel="stylesheet" href="widget.css">
+</head>
+<body>
+
+
+  <div id="fab-widget"></div>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  	new FloatingWidget('#fab-widget', {
+  		mainIcon: 'https://static.tildacdn.com/tild3163-3837-4063-b635-343239366465/main-w.svg',
+  		mainStyle: { background:'#222', color:'#fff' },
+  		greeting: {
+  			enabled: true,
+  			text: 'Здравствуйте! ✋<br>Консультируем 24/7.<br>Чем могу помочь?',
+  			autoHide: true,
+  			delay: null,
+              background:'#222',
+              color:'#fff'
+  		},
+  		pulse: {
+  			enabled: true,
+  			pulseDelay: 4000,
+  			pulseColor: 'rgb(34, 34, 34, .8)',
+  			pulseUntilClick: true
+  		},
+  		buttons: [
+  			{ icon:'https://static.tildacdn.com/tild3131-3462-4366-b132-643066383637/call-w.svg', tooltip:'Обратный звонок', background:'#222', hoverBackground: 'rgb(34, 34, 34, .9)', classes: ['btn-callback'], tooltipStyle: {background: '#222', color: '#fff'}, onClick:()=>window.t1093__processCurrentPopupOnShow('#zeropopup') },
+  			{ icon:'https://static.tildacdn.com/tild6565-3634-4236-a235-336632623932/tg-w.svg', tooltip:'Telegram', background: '#222', hoverBackground: 'rgb(34, 34, 34, .9)', classes: ['btn-tg'], tooltipStyle: {background: '#222', color: '#fff'}, onClick:()=>window.open('https://telegram.me/evroprom_sales') },
+  			{ icon:'https://static.tildacdn.com/tild6532-6466-4563-a362-376163643764/chat-w.svg', tooltip:'Подберем запчасть за 10 секунд!', background: '#222', hoverBackground: 'rgb(34, 34, 34, .9)', classes: ['b24-open-livechat'], alwaysShowLabel:true, tooltipStyle: {background: '#222', color: '#fff'} }
+  		]
+  	})
+  	
+  	document.querySelector('.b24-open-livechat').addEventListener('click', function(){
+          document.querySelector('.b24-widget-button-openline_livechat span').click();
+      });
+  	
+  })
+  </script>
+
+
+</body>
+</html>
