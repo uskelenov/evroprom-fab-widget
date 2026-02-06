@@ -1,4 +1,3 @@
-<script>
 class FloatingWidget {
 
 	/* =========================
@@ -189,4 +188,3 @@ class FloatingWidget {
 		}
 	}
 }
-</script>
